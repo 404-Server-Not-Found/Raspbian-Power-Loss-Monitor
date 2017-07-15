@@ -58,7 +58,7 @@ This part of apctest is for testing USB UPSes.
 Getting UPS capabilities...SUCCESS
 ```
 
-Now, we need to tell APCUPSD that we are ready to roll. we do this by editing the "Is Configured" file
+Now, we need to tell APCUPSD that we are ready to roll. We do this by editing the "Defaults" file
 
 ```shell
 Sudo nano /etc/default/apcupsd
