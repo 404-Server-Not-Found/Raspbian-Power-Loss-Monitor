@@ -177,5 +177,6 @@ s.sendmail(from_email, to_emails, msg.as_string())
 s.quit()
 ```
 
-Now just save everything, reboot the Pi using "sudo reboot" and test the power failure scripts by unpluging the UPS!
-If you have any problems, feel free to contact us by going to our website Pretzelcomputers.com
+## Now just save everything, reboot the Pi using "sudo reboot" and test the power failure scripts by unpluging the UPS!
+
+## If you have any problems, feel free to contact us by going to our website Pretzelcomputers.com
