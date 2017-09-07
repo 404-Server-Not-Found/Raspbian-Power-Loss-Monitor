@@ -10,14 +10,14 @@ In this tutorial we will use a Raspberry Pi with **"APCUPSD"** installed to moni
 First, we will need to install the software that allows our Raspberry Pi to communicate with the UPS. So open up terminal (or SSH into the Pi) and run the following command:
 
 ```shell
-Sudo apt-get update
-Sudo apt-get install apcupsd
+sudo apt-get update
+sudo apt-get install apcupsd
 ```
 
 Next we need to modify the configuration scripts, so APCUPSD can find the UPS. So use nano and open the following file
 
 ```shell
-Sudo nano /etc/apcupsd/apcupsd.conf
+sudo nano /etc/apcupsd/apcupsd.conf
 ```
 
 And then change the config file so it matches the following
@@ -37,7 +37,7 @@ DEVICE
 Ok, Now that that's done we want to test out connection to the UPS, So make sure your UPS is connect to the pi and run this command:
 
 ```shell
-Sudo apctest
+sudo apctest
 ```
 
 if you see an out put similar to this, everything is working so far.
@@ -59,10 +59,10 @@ This part of apctest is for testing USB UPSes.
 Getting UPS capabilities...SUCCESS
 ```
 
-Now, we need to tell APCUPSD that we are ready to roll. We do this by editing the "Defaults" file
+Now, we need to tell APCUPSD that we are ready to roll. We do this by editing the "default" file
 
 ```shell
-Sudo nano /etc/default/apcupsd
+sudo nano /etc/default/apcupsd
 ```
 and change the ISCONFIGURED line to =yes
 
@@ -77,18 +77,18 @@ ISCONFIGURED=yes
 Then restart the service
 
 ```shell
-Sudo service apcupsd restart
+sudo service apcupsd restart
 ```
 
 Next, we will set the service to start at boot
 
 ```shell
-Sudo update-rc.d apcupsd defaults
+sudo update-rc.d apcupsd defaults
 ```
 
 then we can check all the info out UPS is sending to the Pi
 ```shell
-Sudo apcaccess
+sudo apcaccess
 ```
 
 #### Congrats! APCUPSD is all setup! Now we will configure it to send us an email on power failure.
@@ -99,7 +99,7 @@ To do this, we need to edit two scripts, **"On Battery"** and **"Off Battery"**
 First we can edit the "On Battery" script (This is the script executed when the power goes out)
 
 ```shell
-Sudo /etc/apcupsd/onbattery
+sudo /etc/apcupsd/onbattery
 ```
 
 Then add the following
@@ -142,7 +142,7 @@ s.quit()
 Then just edit the Off Battery script to reflect the previous
 
 ```shell
-Sudo /etc/apcupsd/offbattery
+sudo /etc/apcupsd/offbattery
 ```
 
 ```shell
@@ -177,5 +177,5 @@ s.sendmail(from_email, to_emails, msg.as_string())
 s.quit()
 ```
 
-Now just save everything, reboot the Pi using "Sudo Reboot" and test the power failure scripts by unpluging the UPS!
+Now just save everything, reboot the Pi using "sudo reboot" and test the power failure scripts by unpluging the UPS!
 If you have any problems, feel free to contact us by going to our website Pretzelcomputers.com
