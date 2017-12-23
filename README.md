@@ -3,7 +3,9 @@ Raspbian Power Monitor
 
 Raspberry Pi UPS Monitor with Email Notifacations Setup Tutorial
 ----------------------------------------------------------------
-Written 15/07/17
+Written: 15/07/17
+
+Last updated: 22/12/17
 
 In this tutorial we will use a Raspberry Pi with **"APCUPSD"** installed to monitor the UPS's activity and send us an Email with the power goes out _(Assuming that your Router and Modem are connected to the UPS so they stay on durning the Black-Out)_
 
@@ -176,7 +178,7 @@ s.login(GMAIL_ADDRESS, GMAIL_PASSWORD)
 s.sendmail(from_email, to_emails, msg.as_string())
 s.quit()
 ```
+-----------------------------------------------------------------
+ Now just save everything, reboot the Pi using "sudo reboot" and test the power failure scripts by unpluging the UPS!
 
-## Now just save everything, reboot the Pi using "sudo reboot" and test the power failure scripts by unpluging the UPS!
-
-## If you have any problems, feel free to contact us by going to our website Pretzelcomputers.com
+ If you have any problems, feel free to contact us by going to our website Pretzelcomputers.com
