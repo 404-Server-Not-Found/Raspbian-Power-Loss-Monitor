@@ -101,7 +101,7 @@ To do this, we need to edit two scripts, **"On Battery"** and **"Off Battery"**
 First we can edit the "On Battery" script (This is the script executed when the power goes out)
 
 ```shell
-sudo /etc/apcupsd/onbattery
+sudo nano /etc/apcupsd/onbattery
 ```
 
 Then add the following
@@ -144,7 +144,7 @@ s.quit()
 Then just edit the Off Battery script to reflect the previous
 
 ```shell
-sudo /etc/apcupsd/offbattery
+sudo nano /etc/apcupsd/offbattery
 ```
 
 ```shell
