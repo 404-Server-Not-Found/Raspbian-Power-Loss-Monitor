@@ -5,7 +5,7 @@ Raspberry Pi UPS Monitor with Email Notifacations Setup Tutorial
 ----------------------------------------------------------------
 Written: 15/07/17
 
-Last updated: 22/12/17
+Last updated: 15/03/20
 
 In this tutorial we will use a Raspberry Pi with **"APCUPSD"** installed to monitor the UPS's activity and send us an Email with the power goes out _(Assuming that your Router and Modem are connected to the UPS so they stay on durning the Black-Out)_
 
@@ -25,8 +25,6 @@ sudo nano /etc/apcupsd/apcupsd.conf
 And then change the config file so it matches the following
 
 ```shell
-# vim /etc/apcupsd/apcupsd.conf
-
 #UPSCABLE smart
 UPSCABLE usb
 
@@ -42,7 +40,7 @@ Ok, Now that that's done we want to test out connection to the UPS, So make sure
 sudo apctest
 ```
 
-if you see an out put similar to this, everything is working so far.
+if you see an output similar to this, everything is working so far.
 
 ```shell
 2017-07-14 21:32:10 apctest 3.14.10 (13 September 2011) debian
@@ -124,7 +122,7 @@ GMAIL_ADDRESS = 'xxx@gmail.com'
 GMAIL_PASSWORD = 'xxx'
 
 from_email = GMAIL_ADDRESS
-to_emails = ["xxxxxxxxxx@tmomail.net"]  # cell phone address
+to_emails = ["xxxxxxxxxx@gmail.com"]
 
 msg_subject = "ALERT: Main line Power Failure"
 msg_text = "Auto Notification"
@@ -162,7 +160,7 @@ GMAIL_ADDRESS = 'xxx@gmail.com'
 GMAIL_PASSWORD = 'xxx'
 
 from_email = GMAIL_ADDRESS
-to_emails = ["xxxxxxxxxx@tmomail.net"]  # cell phone address
+to_emails = ["xxxxxxxxxx@gmail.com"]
 
 msg_subject = "OK: Main line Power Recovered"
 msg_text = "Auto Notification"
@@ -180,5 +178,3 @@ s.quit()
 ```
 -----------------------------------------------------------------
  Now just save everything, reboot the Pi using "sudo reboot" and test the power failure scripts by unpluging the UPS!
-
- If you have any problems, feel free to contact us by going to our website Pretzelcomputers.com
