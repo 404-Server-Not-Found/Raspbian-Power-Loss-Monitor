@@ -1,7 +1,7 @@
 Raspbian Power Loss Monitor
 ======================
 
-Raspberry Pi UPS Monitor with Email Notifacations Setup Tutorial
+Raspberry Pi UPS Monitor with Email Notifications Setup Tutorial
 ----------------------------------------------------------------
 Written: 15/07/17
 
