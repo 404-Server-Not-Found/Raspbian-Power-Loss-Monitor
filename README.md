@@ -1,11 +1,11 @@
-Raspbian Power Monitor
+Raspbian Power Loss Monitor
 ======================
 
 Raspberry Pi UPS Monitor with Email Notifacations Setup Tutorial
 ----------------------------------------------------------------
 Written: 15/07/17
 
-Last updated: 15/03/20
+Last updated: 19/04/22
 
 In this tutorial we will use a Raspberry Pi with **"APCUPSD"** installed to monitor the UPS's activity and send us an Email with the power goes out _(Assuming that your Router and Modem are connected to the UPS so they stay on durning the Black-Out)_
 
